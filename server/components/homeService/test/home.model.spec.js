@@ -6,8 +6,8 @@ const Model = require('../lib/home.model');
 describe('The Home Model', function() {
   describe('Defaults', () => {
     const item = new Model();
-    it('has a Name', () => item.name.should.equal('yo-dfw'));
-    it('has a Message', () => item.message.should.equal('DFW Top Talent'));
+    it('has a Name', () => item.name.should.equal('yo-ccit'));
+    it('has a Message', () => item.message.should.equal('CloudCodeIt'));
     it('has a Generator', () => item.generator.should.equal('yo-generator'));
   });
 

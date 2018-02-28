@@ -34,7 +34,7 @@ describe('Landing Page', () => {
   });
 
   it('should have hero text', () => {
-    let expected = 'DFW Top Talent';
+    let expected = 'CloudCodeIt';
     expect(page.elements.heroText.getInnerHtml()).toEqual(expected);
   });
 });
