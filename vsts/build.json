@@ -1,0 +1,434 @@
+{
+  "options": [
+    {
+      "enabled": false,
+      "definition": {
+        "id": "5d58cc01-7c75-450c-be18-a388ddb129ec"
+      },
+      "inputs": {
+        "branchFilters": "[\"+refs/heads/*\"]",
+        "additionalFields": "{}"
+      }
+    },
+    {
+      "enabled": false,
+      "definition": {
+        "id": "a9db38f9-9fdc-478c-b0f9-464221e58316"
+      },
+      "inputs": {
+        "workItemType": "339402",
+        "assignToRequestor": "true",
+        "additionalFields": "{}"
+      }
+    },
+    {
+      "enabled": false,
+      "definition": {
+        "id": "57578776-4c22-4526-aeb0-86b6da17ee9c"
+      },
+      "inputs": {}
+    }
+  ],
+  "variables": {
+    "system.debug": {
+      "value": "false",
+      "allowOverride": true
+    }
+  },
+  "retentionRules": [
+    {
+      "branches": [
+        "+refs/heads/*"
+      ],
+      "artifacts": [],
+      "artifactTypesToDelete": [
+        "FilePath",
+        "SymbolStore"
+      ],
+      "daysToKeep": 10,
+      "minimumToKeep": 1,
+      "deleteBuildRecord": true,
+      "deleteTestResults": true
+    }
+  ],
+  "properties": {},
+  "tags": [],
+  "metrics": [
+    {
+      "name": "CurrentBuildsInQueue",
+      "scope": "refs/heads/master",
+      "intValue": 0
+    },
+    {
+      "name": "CurrentBuildsInProgress",
+      "scope": "refs/heads/master",
+      "intValue": 0
+    },
+    {
+      "name": "CanceledBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-03-04T00:00:00.000Z"
+    },
+    {
+      "name": "FailedBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 1,
+      "date": "2018-03-04T00:00:00.000Z"
+    },
+    {
+      "name": "PartiallySuccessfulBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-03-04T00:00:00.000Z"
+    },
+    {
+      "name": "SuccessfulBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 1,
+      "date": "2018-03-04T00:00:00.000Z"
+    },
+    {
+      "name": "TotalBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 2,
+      "date": "2018-03-04T00:00:00.000Z"
+    },
+    {
+      "name": "CanceledBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-03-02T00:00:00.000Z"
+    },
+    {
+      "name": "FailedBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 3,
+      "date": "2018-03-02T00:00:00.000Z"
+    },
+    {
+      "name": "PartiallySuccessfulBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-03-02T00:00:00.000Z"
+    },
+    {
+      "name": "SuccessfulBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 2,
+      "date": "2018-03-02T00:00:00.000Z"
+    },
+    {
+      "name": "TotalBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 5,
+      "date": "2018-03-02T00:00:00.000Z"
+    },
+    {
+      "name": "CanceledBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-02-28T00:00:00.000Z"
+    },
+    {
+      "name": "FailedBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 1,
+      "date": "2018-02-28T00:00:00.000Z"
+    },
+    {
+      "name": "PartiallySuccessfulBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-02-28T00:00:00.000Z"
+    },
+    {
+      "name": "SuccessfulBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 0,
+      "date": "2018-02-28T00:00:00.000Z"
+    },
+    {
+      "name": "TotalBuilds",
+      "scope": "refs/heads/master",
+      "intValue": 1,
+      "date": "2018-02-28T00:00:00.000Z"
+    }
+  ],
+  "_links": {
+    "self": {
+      "href": "https://danielscholl.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/build/Definitions/1?revision=10"
+    },
+    "web": {
+      "href": "https://danielscholl.visualstudio.com/_permalink/_build/index?collectionId=b8e67c32-b881-4c10-99a8-09a37bc5a0b9&projectId=13b42df8-966a-481c-aaf4-cbe1845c6544&definitionId=1"
+    },
+    "editor": {
+      "href": "https://danielscholl.visualstudio.com/_permalink/_build/definitionEditor?collectionId=b8e67c32-b881-4c10-99a8-09a37bc5a0b9&projectId=13b42df8-966a-481c-aaf4-cbe1845c6544&definitionId=1"
+    }
+  },
+  "jobAuthorizationScope": 1,
+  "jobTimeoutInMinutes": 60,
+  "jobCancelTimeoutInMinutes": 5,
+  "process": {
+    "phases": [
+      {
+        "steps": [
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Use Node 6.10",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "31c75bbb-bcdf-4706-8d7c-4da6a1959bc2",
+              "versionSpec": "0.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "versionSpec": "6.10.0",
+              "checkLatest": "false"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Use Yarn 1.x",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "2ec1147b-5c33-41df-94b5-676758d87c1b",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "versionSpec": "1.x",
+              "checkLatest": "false"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Yarn install build",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "0888c9a9-d1b2-4567-aae2-beadcb2059b3",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ProjectDirectory": "",
+              "Arguments": "install",
+              "ProductionMode": "false",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "npm run build",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "fe47e961-9fa8-4106-8639-368c022d43ad",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "custom",
+              "workingDir": "",
+              "verbose": "false",
+              "customCommand": "run build",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": "",
+              "publishRegistry": "useExternalRegistry",
+              "publishFeed": "",
+              "publishEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Yarn install dist --production",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "0888c9a9-d1b2-4567-aae2-beadcb2059b3",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "ProjectDirectory": "dist",
+              "Arguments": "install",
+              "ProductionMode": "true",
+              "customRegistry": "useNpmrc",
+              "customFeed": "",
+              "customEndpoint": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Archive Dist",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "d8b84976-e99a-4b86-b885-4849694435b0",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "rootFolderOrFile": "dist",
+              "includeRootFolder": "true",
+              "archiveType": "zip",
+              "tarCompression": "gz",
+              "archiveFile": "$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip",
+              "replaceExistingArchive": "true"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Copy Files to: $(Build.ArtifactStagingDirectory)",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "5bfb729a-a7c8-4a78-a7c3-8d717bb7c13c",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "SourceFolder": "",
+              "Contents": "**\\*.zip",
+              "TargetFolder": "$(Build.ArtifactStagingDirectory)",
+              "CleanTargetFolder": "false",
+              "OverWrite": "false",
+              "flattenFolders": "false"
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish Artifact: drop",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "refName": "",
+            "task": {
+              "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "PathtoPublish": "$(Build.ArtifactStagingDirectory)",
+              "ArtifactName": "drop",
+              "ArtifactType": "Container",
+              "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)",
+              "Parallel": "false",
+              "ParallelCount": "8"
+            }
+          }
+        ],
+        "name": "Phase 1",
+        "condition": "succeeded()",
+        "target": {
+          "executionOptions": {
+            "type": 0
+          },
+          "allowScriptsAuthAccessOption": false,
+          "type": 1
+        },
+        "jobAuthorizationScope": "projectCollection",
+        "jobCancelTimeoutInMinutes": 1
+      }
+    ],
+    "type": 1
+  },
+  "repository": {
+    "properties": {
+      "cleanOptions": "0",
+      "labelSources": "0",
+      "labelSourcesFormat": "$(build.buildNumber)",
+      "reportBuildStatus": "true",
+      "gitLfsSupport": "false",
+      "skipSyncSource": "false",
+      "checkoutNestedSubmodules": "false",
+      "fetchDepth": "0"
+    },
+    "id": "353afb10-5d7b-4e80-a24f-2dc8c739cb72",
+    "type": "TfsGit",
+    "name": "web-angular",
+    "url": "https://danielscholl.visualstudio.com/Demo/_git/web-angular",
+    "defaultBranch": "refs/heads/master",
+    "clean": "false",
+    "checkoutSubmodules": false
+  },
+  "processParameters": {},
+  "quality": 1,
+  "authoredBy": {
+    "displayName": "dascholl",
+    "url": "https://app.vssps.visualstudio.com/A3a3f1ef2-a091-43df-86a8-a136b0a13216/_apis/Identities/6f693603-46b5-6bd5-af0a-372415f380a3",
+    "id": "6f693603-46b5-6bd5-af0a-372415f380a3",
+    "uniqueName": "dascholl@microsoft.onmicrosoft.com",
+    "imageUrl": "https://danielscholl.visualstudio.com/_api/_common/identityImage?id=6f693603-46b5-6bd5-af0a-372415f380a3",
+    "descriptor": "aad.NmY2OTM2MDMtNDZiNS03YmQ1LWFmMGEtMzcyNDE1ZjM4MGEz"
+  },
+  "drafts": [],
+  "queue": {
+    "_links": {
+      "self": {
+        "href": "https://danielscholl.visualstudio.com/_apis/build/Queues/3"
+      }
+    },
+    "id": 3,
+    "name": "Hosted Linux Preview",
+    "url": "https://danielscholl.visualstudio.com/_apis/build/Queues/3",
+    "pool": {
+      "id": 3,
+      "name": "Hosted Linux Preview",
+      "isHosted": true
+    }
+  },
+  "id": 1,
+  "name": "web-angular",
+  "url": "https://danielscholl.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/build/Definitions/1?revision=10",
+  "uri": "vstfs:///Build/Definition/1",
+  "path": "\\",
+  "type": 2,
+  "queueStatus": 0,
+  "revision": 10,
+  "createdDate": "2018-03-04T21:14:57.610Z",
+  "project": {
+    "id": "13b42df8-966a-481c-aaf4-cbe1845c6544",
+    "name": "Demo",
+    "url": "https://danielscholl.visualstudio.com/_apis/projects/13b42df8-966a-481c-aaf4-cbe1845c6544",
+    "state": "wellFormed",
+    "revision": 33,
+    "visibility": 0
+  }
+}

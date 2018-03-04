@@ -1,0 +1,296 @@
+{
+  "source": 2,
+  "id": 3,
+  "revision": 16,
+  "name": "web-angular",
+  "description": null,
+  "createdBy": {
+    "displayName": "dascholl",
+    "url": "https://app.vssps.visualstudio.com/A3a3f1ef2-a091-43df-86a8-a136b0a13216/_apis/Identities/6f693603-46b5-6bd5-af0a-372415f380a3",
+    "id": "6f693603-46b5-6bd5-af0a-372415f380a3",
+    "uniqueName": "dascholl@microsoft.onmicrosoft.com",
+    "imageUrl": "https://danielscholl.visualstudio.com/_api/_common/identityImage?id=6f693603-46b5-6bd5-af0a-372415f380a3",
+    "descriptor": "aad.NmY2OTM2MDMtNDZiNS03YmQ1LWFmMGEtMzcyNDE1ZjM4MGEz"
+  },
+  "createdOn": "2018-03-02T22:14:30.700Z",
+  "modifiedBy": {
+    "displayName": "dascholl",
+    "url": "https://app.vssps.visualstudio.com/A3a3f1ef2-a091-43df-86a8-a136b0a13216/_apis/Identities/6f693603-46b5-6bd5-af0a-372415f380a3",
+    "id": "6f693603-46b5-6bd5-af0a-372415f380a3",
+    "uniqueName": "dascholl@microsoft.onmicrosoft.com",
+    "imageUrl": "https://danielscholl.visualstudio.com/_api/_common/identityImage?id=6f693603-46b5-6bd5-af0a-372415f380a3",
+    "descriptor": "aad.NmY2OTM2MDMtNDZiNS03YmQ1LWFmMGEtMzcyNDE1ZjM4MGEz"
+  },
+  "modifiedOn": "2018-03-04T21:16:07.703Z",
+  "isDeleted": false,
+  "path": "\\",
+  "variables": {
+    "Artifact": {
+      "value": "web-angular"
+    }
+  },
+  "variableGroups": [],
+  "environments": [
+    {
+      "id": 3,
+      "name": "CI/CD",
+      "rank": 1,
+      "owner": {
+        "displayName": "dascholl",
+        "url": "https://app.vssps.visualstudio.com/A3a3f1ef2-a091-43df-86a8-a136b0a13216/_apis/Identities/6f693603-46b5-6bd5-af0a-372415f380a3",
+        "id": "6f693603-46b5-6bd5-af0a-372415f380a3",
+        "uniqueName": "dascholl@microsoft.onmicrosoft.com",
+        "imageUrl": "https://danielscholl.visualstudio.com/_api/_common/identityImage?id=6f693603-46b5-6bd5-af0a-372415f380a3",
+        "descriptor": "aad.NmY2OTM2MDMtNDZiNS03YmQ1LWFmMGEtMzcyNDE1ZjM4MGEz"
+      },
+      "variables": {},
+      "variableGroups": [],
+      "preDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 7
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 1
+        }
+      },
+      "deployStep": {
+        "id": 8
+      },
+      "postDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 9
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 2
+        }
+      },
+      "deployPhases": [
+        {
+          "deploymentInput": {
+            "parallelExecution": {
+              "parallelExecutionType": "none"
+            },
+            "skipArtifactsDownload": false,
+            "artifactsDownloadInput": {
+              "downloadInputs": []
+            },
+            "queueId": 4,
+            "demands": [],
+            "enableAccessToken": false,
+            "timeoutInMinutes": 0,
+            "jobCancelTimeoutInMinutes": 1,
+            "condition": "succeeded()",
+            "overrideInputs": {}
+          },
+          "rank": 1,
+          "phaseType": 1,
+          "name": "Run on agent",
+          "workflowTasks": [
+            {
+              "taskId": "5e1e3830-fbfb-11e5-aab1-090c92bc4988",
+              "version": "1.*",
+              "name": "Extract files ",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "archiveFilePatterns": "$(System.DefaultWorkingDirectory)/$(Artifact)/drop/*.zip",
+                "destinationFolder": "$(System.DefaultWorkingDirectory)/$(Artifact)/output/",
+                "cleanDestinationFolder": "true"
+              }
+            },
+            {
+              "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+              "version": "3.*",
+              "name": "Azure App Service Deploy: my-linux-web",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "ConnectedServiceName": "a7d65121-30e4-480f-844a-7c188c0e4fe0",
+                "WebAppKind": "applinux",
+                "WebAppName": "my-linux-web",
+                "DeployToSlotFlag": "false",
+                "ResourceGroupName": "",
+                "SlotName": "",
+                "ImageSource": "Builtin",
+                "AzureContainerRegistry": "",
+                "AzureContainerRegistryLoginServer": "",
+                "AzureContainerRegistryImage": "",
+                "AzureContainerRegistryTag": "",
+                "DockerRepositoryAccess": "public",
+                "RegistryConnectedServiceName": "",
+                "PrivateRegistryImage": "",
+                "PrivateRegistryTag": "",
+                "DockerNamespace": "",
+                "DockerRepository": "",
+                "DockerImageTag": "",
+                "VirtualApplication": "",
+                "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+                "BuiltinLinuxPackage": "$(System.DefaultWorkingDirectory)/$(Artifact)/output/",
+                "RuntimeStack": "node|6.11",
+                "StartupCommand": "node server/index.js",
+                "WebAppUri": "",
+                "ScriptType": "",
+                "InlineScript": ":: You can provide your deployment commands here. One command per line.",
+                "ScriptPath": "",
+                "GenerateWebConfig": "false",
+                "WebConfigParameters": "",
+                "AppSettings": "",
+                "ConfigurationSettings": "",
+                "TakeAppOfflineFlag": "false",
+                "UseWebDeploy": "false",
+                "SetParametersFile": "",
+                "RemoveAdditionalFilesFlag": "false",
+                "ExcludeFilesFromAppDataFlag": "false",
+                "AdditionalArguments": "",
+                "RenameFilesFlag": "false",
+                "XmlTransformation": "false",
+                "XmlVariableSubstitution": "false",
+                "JSONFiles": ""
+              }
+            }
+          ]
+        }
+      ],
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": true,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false
+      },
+      "demands": [],
+      "conditions": [
+        {
+          "name": "ReleaseStarted",
+          "conditionType": 1,
+          "value": ""
+        }
+      ],
+      "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+      },
+      "schedules": [],
+      "retentionPolicy": {
+        "daysToKeep": 30,
+        "releasesToKeep": 3,
+        "retainBuild": true
+      },
+      "processParameters": {
+        "dataSourceBindings": [
+          {
+            "dataSourceName": "AzureRMWebAppNamesByType",
+            "parameters": {
+              "WebAppKind": "$(WebAppKind)"
+            },
+            "endpointId": "$(ConnectedServiceName)",
+            "target": "WebAppName"
+          }
+        ]
+      },
+      "properties": {},
+      "preDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "postDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "badgeUrl": "https://danielscholl.vsrm.visualstudio.com/_apis/public/Release/badge/13b42df8-966a-481c-aaf4-cbe1845c6544/3/3"
+    }
+  ],
+  "artifacts": [
+    {
+      "sourceId": "13b42df8-966a-481c-aaf4-cbe1845c6544:1",
+      "type": "Build",
+      "alias": "web-angular-build",
+      "definitionReference": {
+        "artifactSourceDefinitionUrl": {
+          "id": "https://danielscholl.visualstudio.com/_permalink/_build/index?collectionId=b8e67c32-b881-4c10-99a8-09a37bc5a0b9&projectId=13b42df8-966a-481c-aaf4-cbe1845c6544&definitionId=1",
+          "name": ""
+        },
+        "defaultVersionBranch": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionSpecific": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionTags": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionType": {
+          "id": "latestType",
+          "name": "Latest"
+        },
+        "definition": {
+          "id": "1",
+          "name": "web-angular-build"
+        },
+        "project": {
+          "id": "13b42df8-966a-481c-aaf4-cbe1845c6544",
+          "name": "Demo"
+        }
+      },
+      "isPrimary": true
+    }
+  ],
+  "triggers": [],
+  "releaseNameFormat": "Release-$(rev:r)",
+  "url": "https://danielscholl.vsrm.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/Release/definitions/3",
+  "_links": {
+    "self": {
+      "href": "https://danielscholl.vsrm.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/Release/definitions/3"
+    },
+    "web": {
+      "href": "https://danielscholl.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_release?definitionId=3"
+    }
+  },
+  "tags": [],
+  "properties": {
+    "DefinitionCreationSource": {
+      "$type": "System.String",
+      "$value": "ReleaseNew"
+    }
+  }
+}
