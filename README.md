@@ -1,7 +1,7 @@
 # angular2-sample
 
 
-This seed repo serves as an Angular 2 for use with the generator-cloudcodeit-angular. Using [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
+This seed repo serves as an Angular 2 for use with the generator-danielscholl-angular. Using [Webpack](http://webpack.github.io/) for building our files and assisting with boilerplate. We're also using Protractor for our end-to-end story and Karma for our unit tests.
 * Best practices in file and application organization for [Angular 2](https://angular.io/).
 * Ready to go build system using [Webpack](https://webpack.github.io/docs/) for working with [TypeScript](http://www.typescriptlang.org/).
 * Testing Angular 2 code with [Jasmine](http://jasmine.github.io/) and [Karma](http://karma-runner.github.io/).
@@ -17,7 +17,7 @@ This seed repo serves as an Angular 2 for use with the generator-cloudcodeit-ang
 
 ```bash
 # clone our repo
-$ git clone https://github.com/degnome/angular2-web.git angular-sample
+$ git clone https://github.com/danielscholl/angular2-web.git angular-sample
 
 # change directory to your app
 $ cd angular-sample

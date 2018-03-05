@@ -1,4 +1,4 @@
-FROM irvui/alpine-node:6.10.0
+FROM danielscholl/alpine-node:6.10.1
 MAINTAINER Daniel Scholl
 
 COPY yarn.lock /opt/web/yarn.lock

@@ -8,7 +8,7 @@
   },
   "engines": {
     "node": "6.10.0",
-    "npm": "4.0.2"
+    "npm": "3.10.10"
   },
   "license": "MIT",
   "scripts": {
@@ -16,10 +16,11 @@
     "clean-install": "npm run clean && npm install",
     "clean-start": "npm run clean-install && npm start",
     "watch": "webpack --watch --progress --profile",
-    "build": "rimraf dist && webpack --progress --profile --bail",
-    "postbuild": "cp -R server dist/server & cp package.json dist & cp yarn.lock dist",
-    "docker": "npm run build && docker build -t localhost:5000/ui:latest .",
-    "docker:start": "docker run -p 3000:3000 localhost:5000/ui:latest",
+    "build": "webpack --progress --profile --bail",
+    "postbuild": "cp -R server dist/server & cp package.json dist & cp yarn.lock dist & cp web.config dist",
+    "docker": "npm run build && docker build -t danielscholl/web-angular-demo:latest .",
+    "docker:start": "docker run -p 3000:3000 danielscholl/web-angular-demo:latest",
+    "docker:push": "docker push danielscholl/web-angular-demo:latest",
     "serve:dev": "webpack-dev-server --inline --progress --port 8080",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start",
@@ -49,11 +50,13 @@
     "body-parser": "^1.17.1",
     "bunyan": "^1.8.8",
     "bunyan-format": "^0.2.1",
+    "chalk": "^2.3.2",
     "compression": "^1.6.2",
     "core-js": "^2.4.1",
     "ejs": "^2.5.6",
     "errorhandler": "^1.5.0",
     "express": "^4.15.2",
+    "lodash": "^4.17.5",
     "morgan": "^1.8.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "5.2.0",
