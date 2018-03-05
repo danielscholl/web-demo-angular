@@ -1,7 +1,7 @@
 {
   "source": 2,
-  "id": 3,
-  "revision": 16,
+  "id": 5,
+  "revision": 3,
   "name": "web-angular",
   "description": null,
   "createdBy": {
@@ -12,7 +12,7 @@
     "imageUrl": "https://danielscholl.visualstudio.com/_api/_common/identityImage?id=6f693603-46b5-6bd5-af0a-372415f380a3",
     "descriptor": "aad.NmY2OTM2MDMtNDZiNS03YmQ1LWFmMGEtMzcyNDE1ZjM4MGEz"
   },
-  "createdOn": "2018-03-02T22:14:30.700Z",
+  "createdOn": "2018-03-04T23:09:49.933Z",
   "modifiedBy": {
     "displayName": "dascholl",
     "url": "https://app.vssps.visualstudio.com/A3a3f1ef2-a091-43df-86a8-a136b0a13216/_apis/Identities/6f693603-46b5-6bd5-af0a-372415f380a3",
@@ -21,7 +21,7 @@
     "imageUrl": "https://danielscholl.visualstudio.com/_api/_common/identityImage?id=6f693603-46b5-6bd5-af0a-372415f380a3",
     "descriptor": "aad.NmY2OTM2MDMtNDZiNS03YmQ1LWFmMGEtMzcyNDE1ZjM4MGEz"
   },
-  "modifiedOn": "2018-03-04T21:16:07.703Z",
+  "modifiedOn": "2018-03-04T23:11:17.873Z",
   "isDeleted": false,
   "path": "\\",
   "variables": {
@@ -32,7 +32,7 @@
   "variableGroups": [],
   "environments": [
     {
-      "id": 3,
+      "id": 5,
       "name": "CI/CD",
       "rank": 1,
       "owner": {
@@ -51,7 +51,7 @@
             "rank": 1,
             "isAutomated": true,
             "isNotificationOn": false,
-            "id": 7
+            "id": 13
           }
         ],
         "approvalOptions": {
@@ -64,7 +64,7 @@
         }
       },
       "deployStep": {
-        "id": 8
+        "id": 14
       },
       "postDeployApprovals": {
         "approvals": [
@@ -72,7 +72,7 @@
             "rank": 1,
             "isAutomated": true,
             "isNotificationOn": false,
-            "id": 9
+            "id": 15
           }
         ],
         "approvalOptions": {
@@ -94,7 +94,7 @@
             "artifactsDownloadInput": {
               "downloadInputs": []
             },
-            "queueId": 4,
+            "queueId": 3,
             "demands": [],
             "enableAccessToken": false,
             "timeoutInMinutes": 0,
@@ -234,17 +234,17 @@
         "gatesOptions": null,
         "gates": []
       },
-      "badgeUrl": "https://danielscholl.vsrm.visualstudio.com/_apis/public/Release/badge/13b42df8-966a-481c-aaf4-cbe1845c6544/3/3"
+      "badgeUrl": "https://danielscholl.vsrm.visualstudio.com/_apis/public/Release/badge/13b42df8-966a-481c-aaf4-cbe1845c6544/5/5"
     }
   ],
   "artifacts": [
     {
-      "sourceId": "13b42df8-966a-481c-aaf4-cbe1845c6544:1",
+      "sourceId": "13b42df8-966a-481c-aaf4-cbe1845c6544:3",
       "type": "Build",
-      "alias": "web-angular-build",
+      "alias": "web-angular",
       "definitionReference": {
         "artifactSourceDefinitionUrl": {
-          "id": "https://danielscholl.visualstudio.com/_permalink/_build/index?collectionId=b8e67c32-b881-4c10-99a8-09a37bc5a0b9&projectId=13b42df8-966a-481c-aaf4-cbe1845c6544&definitionId=1",
+          "id": "https://danielscholl.visualstudio.com/_permalink/_build/index?collectionId=b8e67c32-b881-4c10-99a8-09a37bc5a0b9&projectId=13b42df8-966a-481c-aaf4-cbe1845c6544&definitionId=3",
           "name": ""
         },
         "defaultVersionBranch": {
@@ -264,8 +264,8 @@
           "name": "Latest"
         },
         "definition": {
-          "id": "1",
-          "name": "web-angular-build"
+          "id": "3",
+          "name": "web-angular"
         },
         "project": {
           "id": "13b42df8-966a-481c-aaf4-cbe1845c6544",
@@ -277,20 +277,20 @@
   ],
   "triggers": [],
   "releaseNameFormat": "Release-$(rev:r)",
-  "url": "https://danielscholl.vsrm.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/Release/definitions/3",
+  "url": "https://danielscholl.vsrm.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/Release/definitions/5",
   "_links": {
     "self": {
-      "href": "https://danielscholl.vsrm.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/Release/definitions/3"
+      "href": "https://danielscholl.vsrm.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_apis/Release/definitions/5"
     },
     "web": {
-      "href": "https://danielscholl.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_release?definitionId=3"
+      "href": "https://danielscholl.visualstudio.com/13b42df8-966a-481c-aaf4-cbe1845c6544/_release?definitionId=5"
     }
   },
   "tags": [],
   "properties": {
     "DefinitionCreationSource": {
       "$type": "System.String",
-      "$value": "ReleaseNew"
+      "$value": "ReleaseImport"
     }
   }
 }
