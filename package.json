@@ -35,7 +35,6 @@
     "docs": "typedoc --options typedoc.json src/app/app.component.ts",
     "start": "nodemon --ignore client --exec 'LOG_LEVEL=trace node' server/index.js & npm run serve:dev",
     "start:hmr": "npm run server:dev -- --hot",
-    "postinstall": "if test \"$NODE_ENV\" != \"production\" ; then npm run webdriver-update ; fi ",
     "prod": "npm run build && cd dist && yarn install --production && node server/index.js"
   },
   "dependencies": {
